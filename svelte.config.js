@@ -8,7 +8,10 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [vitePreprocess(), mdsvex()],
 	kit: { adapter: adapter() },
-	extensions: ['.svelte', '.svx']
+	extensions: ['.svelte', '.svx'], 
+	alias: {
+		"@/*": "./path/to/lib/*",
+    },
 };
 
 export default config;
