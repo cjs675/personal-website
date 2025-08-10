@@ -1,11 +1,9 @@
 <script lang="ts"> 
- import { ModeWatcher } from "mode-watcher"; 
  import Footer from '$lib/Footer.svelte';
 </script> 
 
-<ModeWatcher />
+
 <h1>Public Module Development</h1> 
-<hr />
 <p>
 
 </p>
