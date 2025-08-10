@@ -1,5 +1,5 @@
 <footer>
-    <p>© 2025 pubmod.dev  All rights reserved.</p> 
+
 </footer>
 
 <style>

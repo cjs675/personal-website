@@ -1,5 +1,7 @@
 <script lang="ts">
     import { page } from '$app/stores';
+    import { ModeWatcher } from "mode-watcher"; 
+
 
     // navigation items - easier to maintain & extend 
     const navItems = [
@@ -17,6 +19,16 @@
   function isActive(href: string, currentPath: string): boolean {
     return currentPath === href;
   }
+
+    // Function to get inverted colors
+    function getButtonClasses(isActive: boolean, mode: string) {
+        // Invert text and shadow colors based on mode
+        if (mode === 'dark') {
+            return `bg-gray-900 text-white border-white ${isActive ? 'shadow-[4px_4px_0_0_white]' : 'shadow-[4px_4px_0_0_gray]'}`
+        } else {
+            return `bg-gray-25 text-black border-black ${isActive ? 'shadow-[4px_4px_0_0_black]' : 'shadow-[4px_4px_0_0_gray]'}`
+        }
+    }
 </script>
 
 <nav class="navbar flex justify-center gap-x-4 my-8">
